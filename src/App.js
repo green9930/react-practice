@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import TodoRouter from 'sparta-todolist/router/TodoRouter';
+// import ThunkTodoList from 'redux-thunk-todolist/ThunkTodoList';
+// import Counter from 'redux-thunk-counter/Counter';
+// import TodoRouter from 'sparta-todolist/router/TodoRouter';
+// import JsonServerMain from 'json-server/JsonServerMain';
+// import MovieRouter from 'redux-toolkit-simple-movie/router/MovieRouter';
+// import TodoRouter from 'redux-toolkit-todolist/r/outer/TodoRouter';
+// import TodoRouter from 'redux-todolist/router/TodoRouter';
+// import TodoList from 'redux-todolist/pages/TodoListPage';
+// import ReduxCounter from 'reduxPrac/ReduxCounter';
+// import UseReducerPrac1 from 'hookPrac/useReducer/UseReducerPrac1';
+// import UseCallbackPrac1 from './hookPrac/useCallback/UseCallbackPrac1';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <title>React Playground</title>
+      {/* <ThunkTodoList /> */}
+      <TodoRouter />
     </div>
   );
 }
