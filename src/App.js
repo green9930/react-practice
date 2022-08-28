@@ -1,4 +1,5 @@
-import TodoRouter from 'sparta-todolist/router/TodoRouter';
+import Sleep from "reactQueryPrac/Sleep";
+// import TodoRouter from 'sparta-todolist/router/TodoRouter';
 // import ThunkTodoList from 'redux-thunk-todolist/ThunkTodoList';
 // import Counter from 'redux-thunk-counter/Counter';
 // import TodoRouter from 'sparta-todolist/router/TodoRouter';
@@ -15,8 +16,7 @@ function App() {
   return (
     <div className="App">
       <title>React Playground</title>
-      {/* <ThunkTodoList /> */}
-      <TodoRouter />
+      <Sleep />
     </div>
   );
 }
