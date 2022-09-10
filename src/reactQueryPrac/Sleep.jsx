@@ -35,6 +35,7 @@ const Sleep = () => {
   // 쿼리 무효화 필요
   const sleep_query = useQuery("sleep_list", getSleepList, {
     onSuccess: (data) => {
+      console.log("GET MUTATE!!");
       console.log(data);
     },
     staleTime: 3000,
@@ -48,6 +49,7 @@ const Sleep = () => {
       // 수면 데이터 목록을 다시 불러오면 ok
       // 쿼리 무효화 시킬 key 값 넣어줌
       // key 값을 넘기지 않으면 모든 쿼리 key 무효화
+      console.log("POST MUTATE!!");
       QueryClient.invalidateQueries("sleep_list");
       day_input.current.value = "";
       time_input.current.value = "";
@@ -103,7 +105,7 @@ const Sleep = () => {
   // react query는 isLoading 상태를 따로 만들 필요 없음
   if (sleep_query.isLoading) return null;
 
-  console.log(sleep_query.data.data);
+  console.log("sleep_query.data.data", sleep_query.data.data);
 
   return (
     <div>

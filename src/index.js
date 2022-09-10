@@ -12,6 +12,7 @@ import GlobalStyle from "sparta-todolist/styles/GlobalStyle";
 import { BrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
+import { RecoilRoot } from "recoil";
 
 const queryClient = new QueryClient();
 
@@ -22,8 +23,10 @@ root.render(
     <BrowserRouter>
       {/* <Provider store={store}> */}
       <QueryClientProvider client={queryClient}>
-        <ReactQueryDevtools initialIsOpen={true} />
-        <App />
+        <RecoilRoot>
+          <ReactQueryDevtools initialIsOpen={true} />
+          <App />
+        </RecoilRoot>
       </QueryClientProvider>
       {/* </Provider> */}
     </BrowserRouter>
